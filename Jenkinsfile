@@ -2,11 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Git Scm') {
             steps {
-                echo 'Hello World'
+                echo 'Cloning git repo'
                 git branch: 'main', url: 'https://github.com/Vikhe-mayuri/nex-ai-frontend.git'
             }
         }
+        stage('Installing npm') {
+            steps {
+                echo 'Installing npm'
+                sh '''npm install
+                '''
+            }
+        }
+
     }
 }
