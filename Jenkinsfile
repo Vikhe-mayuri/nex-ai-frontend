@@ -19,7 +19,6 @@ pipeline {
             steps {
                 echo 'Starting npm'
                 sh 'npm start &'
-                sleep time: 10, unit: 'SECONDS'  // Allow some time to start
             }
         }
     }
