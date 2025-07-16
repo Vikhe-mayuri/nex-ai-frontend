@@ -15,6 +15,12 @@ pipeline {
                 '''
             }
         }
-
+        stage('Starting npm') {
+            steps {
+                echo 'Starting npm'
+                sh '''npm start
+                '''
+            }
+        }
     }
 }
